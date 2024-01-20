@@ -3,6 +3,8 @@ import mapIcon from "../assets/location.png";
 import search from "../assets/search.png";
 import cities from "../assets/cities";
 import { useWeatherContext } from "../context/ContextApi";
+const API = import.meta.env.VITE_API_KEY;
+
 function SearchBar() {
   const [input, setInput] = useState("");
   const [results, setResults] = useState("");
@@ -35,7 +37,7 @@ function SearchBar() {
 
   async function mainCity(location) {
     const res = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=4c7cd73b5685fa61f45cce111006dcde&exclude=minutely`
+      `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${API}&exclude=minutely`
     );
     const result = await res.json();
     return result;
