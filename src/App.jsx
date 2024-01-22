@@ -110,7 +110,7 @@ function App() {
                 <h1 className="font-bold text-6xl ">{currentTemp()} °C</h1>
               )}
               <img
-                src={`https://openweathermap.org/img/wn/04d@2x.png`}
+                src={`https://openweathermap.org/img/wn/${weather?weather.current.weather[0].icon:'04d'}@2x.png`}
                 alt=""
               />
             </div>
