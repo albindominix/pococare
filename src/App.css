@@ -29,3 +29,10 @@ body {
   outline: none;
   box-shadow: 0 0 0 3px hsla(220, 100%, 50%, 80%);
 } */
+.apexcharts-element-hidden{
+  opacity:.45 !important;
+scale:.8
+  }
+  .apexcharts-menu-icon{
+    display: none;
+  }

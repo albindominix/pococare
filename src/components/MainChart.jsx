@@ -39,22 +39,33 @@ const seriesData = filtedredData?.map((weather, index) =>weather.temp+'°C' )
     chart: {
       height: 280,
       type: "area",
+      toolbar: {
+        show: true,
+        tools: {
+          download: true,
+          selection: true,
+          zoom: false,
+          pan:true,
+          zoomin: true,
+          zoomout: true,},
+          autoSelected:'zoom'
+      }
       
     },
-    events: {
-      mounted: function (chart) {
-        var commitsEl = document.querySelector('.cmeta span.commits');
-        var commits = chart.getSeriesTotalXRange(chart.w.globals.minX, chart.w.globals.maxX)
+    // events: {
+    //   mounted: function (chart) {
+    //     var commitsEl = document.querySelector('.cmeta span.commits');
+    //     var commits = chart.getSeriesTotalXRange(chart.w.globals.minX, chart.w.globals.maxX)
   
-        commitsEl.innerHTML = commits
-      },
-      updated: function (chart) {
-        var commitsEl = document.querySelector('.cmeta span.commits');
-        var commits = chart.getSeriesTotalXRange(chart.w.globals.minX, chart.w.globals.maxX)
+    //     commitsEl.innerHTML = commits
+    //   },
+    //   updated: function (chart) {
+    //     var commitsEl = document.querySelector('.cmeta span.commits');
+    //     var commits = chart.getSeriesTotalXRange(chart.w.globals.minX, chart.w.globals.maxX)
   
-        commitsEl.innerHTML = commits
-      }
-    },
+    //     commitsEl.innerHTML = commits
+    //   }
+    // },
     dataLabels: {
       enabled: false,
     },
@@ -93,6 +104,7 @@ const seriesData = filtedredData?.map((weather, index) =>weather.temp+'°C' )
       show: false,
     },
     xaxis: {
+      stepSize:10,
       axisBorder: {
         show: false,
       },
