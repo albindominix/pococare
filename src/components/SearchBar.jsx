@@ -116,7 +116,7 @@ console.log(latitiude,longitiude,'latitiude,longitiude')
                   handleChange(result.city, result.lat, result.lng);
                 }}
               >
-                <div>
+                <div className="flex sm:items-end items-center">
                   <span className="font-bold text-xl">{result.city},</span>
                   <span>{result.state}</span>
                 </div>
