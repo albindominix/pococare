@@ -44,7 +44,7 @@ const seriesData = filtedredData?.map((weather, index) =>weather.temp+'°C' )
         tools: {
           download: true,
           selection: true,
-          zoom: true,
+          zoom: false,
           pan:true,
           zoomin: true,
           zoomout: true,},
