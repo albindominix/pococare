@@ -21,7 +21,7 @@ function DailyTempCard({ weather }) {
     return dayName;
   }
   return (
-    <div className=" relative m-2">
+    <div className=" relative m-2 min-w-[65px]">
       <div className=" flex flex-col items-center justify-center  p-2">
         <p>{getDay(weather.dt)}</p>
         <p>

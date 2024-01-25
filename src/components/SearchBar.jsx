@@ -10,7 +10,6 @@ function SearchBar() {
   const [results, setResults] = useState("");
   const [data, setData] = useState([]);
   const [isDisplay, setIsDisplay] = useState(false);
-
   const { location, setLocation } = useWeatherContext();
 
   useEffect(() => {
@@ -88,7 +87,7 @@ console.log(latitiude,longitiude,'latitiude,longitiude')
   return (
     <div className="searchbar relative  flex flex-col gap-4">
       <div
-        className=" w-full h-16 rounded-xl border z-20  overflow-hidden px-4 bg-white flex items-center text-gray-900  "
+        className=" w-full h-16 rounded-xl border z-20  overflow-hidden px-4 bg-white flex items-center text-gray-900 focus:outline-none focus:border-sky-500 focus:ring-sky-500  sm:text-sm focus:ring-1 "
         style={{ boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" }}
       >
         <img src={mapIcon} className="w-6 h-6 md:w-8 md:h-8 mr-2" alt="" />
